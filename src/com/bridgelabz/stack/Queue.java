@@ -18,6 +18,18 @@ public class Queue {
         }
         temp.next = node;
     }
+
+    int dequeue(){
+        if(isEmpty()){
+            return -1;
+        }
+        int front = head.data;
+        if(head==tail){
+            tail=null;
+        }
+        head=head.next;
+        return front;
+    }
     void print(){
         Node temp = head;
         while(temp!=null){
