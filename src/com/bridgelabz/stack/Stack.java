@@ -17,6 +17,22 @@ public class Stack {
         head = node;
     }
 
+    int pop(){
+        if (isEmpty()) {
+            return -1;
+        }
+        int temp = head.data;
+        System.out.println("Popped element: " + temp);
+        head = head.next;
+        return temp;
+    }
+    int peek() {
+        if (isEmpty()){
+            return -1;
+        }
+        System.out.println(head.data);
+        return head.data;
+    }
 
     void print(){
         Node temp = head;
